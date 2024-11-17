@@ -1,3 +1,4 @@
-import Slides from './onboard/Slides';
+import Slides from './onboarding/Slides';
+import ReusableText from './reusable/ReusableText';
 
-export { Slides };
+export { Slides, ReusableText };
