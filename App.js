@@ -1,10 +1,9 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts } from 'expo-font';
-import { StatusBar } from 'expo-status-bar';
-import { useCallback, useEffect } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Onboarding } from './screens';
+import { useCallback } from 'react';
+import { StyleSheet } from 'react-native';
+import { Onboarding, Search } from './screens';
 import { BottomNavigation } from './components';
 export * as Splashscreen from 'expo-splash-screen';
 
@@ -43,6 +42,14 @@ export default function App() {
         <Stack.Screen
           component={BottomNavigation}
           name="Bottom"
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        <Stack.Screen
+          component={Search}
+          name="Search"
           options={{
             headerShown: false,
           }}
