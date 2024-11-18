@@ -7,7 +7,7 @@ const CountryDetail = ({ navigation }) => {
   console.log(route.params);
   return (
     <View>
-      <Text>CountryDetail</Text>
+      <Text>{JSON.stringify(route.params)}</Text>
     </View>
   );
 };
