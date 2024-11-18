@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
 import React from 'react';
 import { COLORS, SIZES } from '../../constants/theme';
 import ReusableText from '../reusable/ReusableText';
 import ReusableButton from '../button/ReusableButton';
+import VerticalSpacer from '../reusable/VerticalSpacer';
 
 const Slides = ({ item }) => {
   return (
@@ -15,7 +16,7 @@ const Slides = ({ item }) => {
           size={SIZES.xxLarge}
           color={COLORS.white}
         />
-
+        <VerticalSpacer height={40} />
         <ReusableButton
           onPress={() => {}}
           btnText={"Let's go"}

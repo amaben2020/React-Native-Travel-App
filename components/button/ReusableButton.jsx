@@ -1,5 +1,5 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SIZES } from '../../constants/theme';
 
 const ReusableButton = ({
@@ -12,18 +12,11 @@ const ReusableButton = ({
   borderColor,
 }) => {
   return (
-    <TouchableOpacity onPress={onPress}>
-      <Text
-        style={styles.btnText(
-          textColor,
-          borderWidth,
-          width,
-          backgroundColor,
-          borderColor
-        )}
-      >
-        {btnText}
-      </Text>
+    <TouchableOpacity
+      onPress={onPress}
+      style={styles.btnStyle(borderWidth, width, backgroundColor, borderColor)}
+    >
+      <Text style={styles.btnText(textColor)}>{btnText}</Text>
     </TouchableOpacity>
   );
 };
