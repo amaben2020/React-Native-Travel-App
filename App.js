@@ -5,6 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useCallback, useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Onboarding } from './screens';
+import { BottomNavigation } from './components';
 export * as Splashscreen from 'expo-splash-screen';
 
 export default function App() {
@@ -33,7 +34,15 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen
           component={Onboarding}
-          name="onboarding"
+          name="Onboard"
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        <Stack.Screen
+          component={BottomNavigation}
+          name="Bottom"
           options={{
             headerShown: false,
           }}

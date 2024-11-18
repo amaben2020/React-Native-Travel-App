@@ -4,8 +4,11 @@ import { COLORS, SIZES } from '../../constants/theme';
 import ReusableText from '../reusable/ReusableText';
 import ReusableButton from '../button/ReusableButton';
 import VerticalSpacer from '../reusable/VerticalSpacer';
+import { useNavigation } from '@react-navigation/native';
 
 const Slides = ({ item }) => {
+  const navigation = useNavigation();
+
   return (
     <View>
       <Image source={item.image} style={styles.image} />
@@ -18,7 +21,7 @@ const Slides = ({ item }) => {
         />
         <VerticalSpacer height={40} />
         <ReusableButton
-          onPress={() => {}}
+          onPress={() => navigation.navigate('Bottom')}
           btnText={"Let's go"}
           width={(SIZES.width - 50) / 2.2}
           borderColor={COLORS.red}
