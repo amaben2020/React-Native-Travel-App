@@ -2,13 +2,14 @@ import { View, Text } from 'react-native';
 import React from 'react';
 import { useRoute } from '@react-navigation/native';
 
-const Details = () => {
+const CountryDetail = ({ navigation }) => {
   const route = useRoute();
+  console.log(route.params);
   return (
     <View>
-      <Text>Details</Text>
+      <Text>CountryDetail</Text>
     </View>
   );
 };
 
-export default Details;
+export default CountryDetail;
