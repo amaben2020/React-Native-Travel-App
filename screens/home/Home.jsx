@@ -6,6 +6,7 @@ import { TouchableOpacity, View } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { homeStyles } from './home.style';
 import { COLORS, SIZES, TEXT } from '../../constants/theme';
+import Places from '../../components/home/Places';
 
 const Home = ({ navigation }) => {
   return (
@@ -28,6 +29,8 @@ const Home = ({ navigation }) => {
           size={TEXT.large}
           color={COLORS.black}
         />
+
+        <Places />
       </View>
     </SafeAreaView>
   );
